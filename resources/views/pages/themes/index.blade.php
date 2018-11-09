@@ -3,18 +3,17 @@
 @section('title', 'Themes')
 
 @section('content')
-	<div class="flex items-center justify-between border-b pb-4 mb-8 text-grey-darker">
-		<div>
-			<div class="text-xs font-medium uppercase tracking-wide text-grey-dark mb-1">Presentation</div>
-			<h1>Themes</h1>
-		</div>
-		<div>
-			<a href="#" class="inline-flex items-center no-underline py-2 px-4 rounded bg-blue text-blue-lightest font-semibold hover:bg-blue-dark hover:text-white text-sm uppercase tracking-wide">
+	@component('components.page-header')
+		@slot('section', 'Presentation')
+		@slot('title', 'Themes')
+
+		@slot('controls')
+			<a href="{{ route('themes.create') }}" class="inline-flex items-center no-underline py-2 px-4 rounded bg-blue text-blue-lightest font-semibold hover:bg-blue-dark hover:text-white text-sm uppercase tracking-wide">
 				<i data-feather="plus-circle" class="h-5 w-5 mr-2"></i>
 				New Theme
 			</a>
-		</div>
-	</div>
+		@endslot
+	@endcomponent
 
 	<div class="row">
 		<div class="col-8">
@@ -22,13 +21,6 @@
 				<div class="py-3 px-6 uppercase tracking-wide text-grey-dark font-semibold text-sm">
 					Themes to be installed
 				</div>
-
-				<!-- <div class="py-3 px-6 bg-grey-lightest text-xs uppercase tracking-wide font-semibold text-grey-dark border-t border-b">
-					<div class="row">
-						<div class="col-4">Name</div>
-						<div class="col-4">Location</div>
-					</div>
-				</div> -->
 
 				<div class="py-3 px-6">
 					<div class="row">
@@ -39,7 +31,7 @@
 							themes/atmosphere
 						</div>
 						<div class="col-4 justify-end">
-							<a href="#" class="flex items-center rounded-sm py-1 px-2 text-2xs font-semibold uppercase tracking-wide no-underline bg-grey-lighter text-grey-darker hover:bg-grey-light">
+							<a href="#" class="flex items-center rounded-sm py-1 px-2 text-xs font-semibold uppercase tracking-wide no-underline bg-grey-lighter text-grey-darker hover:bg-grey-light">
 								Install
 							</a>
 						</div>
@@ -54,8 +46,8 @@
 							themes/space
 						</div>
 						<div class="col-4 justify-end">
-							<a href="#" class="flex items-center no-underline text-grey-dark hover:text-grey-darkest">
-								<i data-feather="arrow-right-circle" class="h-5 w-5 leading-none"></i>
+							<a href="#" class="flex items-center rounded-sm py-1 px-2 text-xs font-semibold uppercase tracking-wide no-underline bg-grey-lighter text-grey-darker hover:bg-grey-light">
+								Install
 							</a>
 						</div>
 					</div>

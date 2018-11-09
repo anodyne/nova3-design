@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') &bull; {{ config('app.name', 'Nova NextGen Design') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,32 +22,10 @@
 				<a href="#" class="flex justify-center my-6 leading-0"></a>
 
 				<div class="flex flex-col -mx-6">
-					<a href="#" class="flex justify-between no-underline text-grey-dark font-medium py-2 px-6 flex items-center hover:text-grey-darkest">
+					<a href="{{ route('themes.index') }}" class="flex justify-between no-underline text-grey-dark font-medium py-2 px-6 flex items-center hover:text-grey-darkest">
 						<div class="flex items-center">
-							<i data-feather="home" class="h-5 w-5 mr-3"></i>
-							Dashboard
+							Themes
 						</div>
-					</a>
-					<a href="#" class="flex justify-between no-underline text-grey-dark font-medium py-2 px-6 flex items-center hover:text-grey-darkest">
-						<div class="flex items-center">
-							<i data-feather="file" class="h-5 w-5 mr-3"></i>
-							Pages
-						</div>
-						<i data-feather="chevron-down" class="h-4 w-4"></i>
-					</a>
-					<a href="#" class="flex justify-between no-underline text-grey-dark font-medium py-2 px-6 flex items-center hover:text-grey-darkest">
-						<div class="flex items-center">
-							<i data-feather="user" class="h-5 w-5 mr-3"></i>
-							Authentication
-						</div>
-						<i data-feather="chevron-down" class="h-4 w-4"></i>
-					</a>
-					<a href="#" class="flex justify-between no-underline text-grey-dark font-medium py-2 px-6 flex items-center hover:text-grey-darkest">
-						<div class="flex items-center">
-							<i data-feather="layout" class="h-5 w-5 mr-3"></i>
-							Layouts
-						</div>
-						<i data-feather="chevron-down" class="h-4 w-4"></i>
 					</a>
 				</div>
 
@@ -74,7 +52,7 @@
 							<i data-feather="git-branch" class="h-5 w-5 mr-3"></i>
 							Changelog
 						</div>
-						<div class="rounded bg-blue text-white text-2xs py-1 px-2">v3.0</div>
+						<div class="rounded-sm bg-blue text-white text-2xs py-1 px-2">v3.0</div>
 					</a>
 				</div>
 			</div>
